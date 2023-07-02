@@ -1,5 +1,5 @@
 import mongoose from 'mongoose'
-import Product from './productModel'
+import Product from './productModel.js'
 
 const orderSchema = mongoose.Schema({
   user: {
@@ -71,6 +71,6 @@ const orderSchema = mongoose.Schema({
   timestamps: true
 })
 
-const Order = mongoose.model('Order', userSchema)
+const Order = mongoose.model('Order', orderSchema)
 
 export default Order
